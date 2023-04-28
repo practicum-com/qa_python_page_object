@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class LoginPageMesto:
+class LoginPageAround:
     # локатор поля «Email»
     email_field = [By.ID, 'email']
     # локатор поля «Пароль»

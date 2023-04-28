@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 # Класс страницы авторизации
-class LoginPageMesto:
+class LoginPageAround:
     email_field = [By.ID, 'email']
     password_field = [By.ID, 'password']
     sign_in_button = [By.CLASS_NAME, 'auth-form__button']
@@ -29,7 +29,7 @@ class LoginPageMesto:
 
 
 # Класс главной страницы
-class HomePageMesto:
+class HomePageAround:
     # создай локатор для поля «Занятие» в профиле пользователя
     profile_description = ...
 
@@ -45,7 +45,7 @@ class HomePageMesto:
         return ...
 
 
-class TestPraktikum:
+class TestAround:
 
     driver = None
 
@@ -56,7 +56,7 @@ class TestPraktikum:
 
     def test_get_description(self):
         # перешли на страницу тестового приложения
-        self.driver.get('https://qa-mesto.praktikum-services.ru/')
+        self.driver.get('https://around.en.practicum-services.com/')
 
         # создай объект класса страницы авторизации
         ...

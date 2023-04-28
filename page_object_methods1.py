@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class HomePageMesto:
+class HomePageAround:
     # локатор кнопки добавления нового места
     add_new_place_button = [By.CLASS_NAME, 'profile__add-button']
     # локатор поля «Название»

@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 # Класс страницы авторизации
-class LoginPageMesto:
+class LoginPageAround:
     email_field = [By.ID, 'email']
     password_field = [By.ID, 'password']
     sign_in_button = [By.CLASS_NAME, 'auth-form__button']
@@ -29,7 +29,7 @@ class LoginPageMesto:
 
 
 # Класс заголовка
-class HeaderPageMesto:
+class HeaderPageAround:
     # создай локатор для элемента c email в заголовке страницы
     header_user = ...
 
@@ -46,7 +46,7 @@ class HeaderPageMesto:
 
 
 # класс с автотестом
-class TestPraktikum:
+class TestAround:
 
     driver = None
 
@@ -57,7 +57,7 @@ class TestPraktikum:
 
     def test_check_email_in_header(self):
         # перешли на страницу тестового приложения
-        self.driver.get('https://qa-mesto.praktikum-services.ru/')
+        self.driver.get('https://around.en.practicum-services.com/')
 
         # создай объект класса страницы авторизации
         ...

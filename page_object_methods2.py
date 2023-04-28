@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class RegistrationPageMesto:
+class RegistrationPageAround:
     # локатор поля «Email»
     email_field = ...
     # локатор поля «Пароль»
