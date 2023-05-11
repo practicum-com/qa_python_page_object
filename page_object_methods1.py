@@ -3,13 +3,13 @@ from selenium.webdriver.common.by import By
 
 class HomePageAround:
     # локатор кнопки добавления нового места
-    add_new_place_button = [By.CLASS_NAME, 'profile__add-button']
+    add_new_place_button = (By.CLASS_NAME, 'profile__add-button')
     # локатор поля «Название»
-    name_field = [By.NAME, 'name']
+    name_field = (By.NAME, 'name')
     # локатор поля «Ссылка на картинку»
-    link_to_picture_field = [By.NAME, 'link']
+    link_to_picture_field = (By.NAME, 'link')
     # локатор кнопки «Сохранить»
-    save_button = [By.XPATH, ".//form[@name='new-card']/button[text()='Сохранить']"]
+    save_button = (By.XPATH, ".//form[@name='new-card']/button[text()='Сохранить']")
 
     def __init__(self, driver):
         self.driver = driver

@@ -3,11 +3,11 @@ from selenium.webdriver.common.by import By
 
 class LoginPageAround:
     # локатор поля «Email»
-    email_field = [By.ID, 'email']
+    email_field = (By.ID, 'email')
     # локатор поля «Пароль»
-    password_field = [By.ID, 'password']
+    password_field = (By.ID, 'password')
     # локатор кнопки входа в приложение
-    sign_in_button = [By.CLASS_NAME, 'auth-form__button']
+    sign_in_button = (By.CLASS_NAME, 'auth-form__button')
     # добавь здесь локатор для кнопки «Регистрация»
     ...
 

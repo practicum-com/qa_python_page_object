@@ -6,9 +6,9 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 # Класс страницы авторизации
 class LoginPageAround:
-    email_field = [By.ID, 'email']
-    password_field = [By.ID, 'password']
-    sign_in_button = [By.CLASS_NAME, 'auth-form__button']
+    email_field = (By.ID, 'email')
+    password_field = (By.ID, 'password')
+    sign_in_button = (By.CLASS_NAME, 'auth-form__button')
 
     def __init__(self, driver):
         self.driver = driver
@@ -57,7 +57,7 @@ class TestAround:
 
     def test_check_email_in_header(self):
         # перешли на страницу тестового приложения
-        self.driver.get('https://around.en.practicum-services.com/')
+        self.driver.get('https://around-v1.en.practicum-services.com/')
 
         # создай объект класса страницы авторизации
         ...
