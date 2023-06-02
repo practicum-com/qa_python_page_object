@@ -2,33 +2,33 @@ from selenium.webdriver.common.by import By
 
 
 class HomePageAround:
-    # локатор кнопки добавления нового места
+    # The Add button locator
     add_new_place_button = (By.CLASS_NAME, 'profile__add-button')
-    # локатор поля «Название»
+    # The Name field locator
     name_field = (By.NAME, 'name')
-    # локатор поля «Ссылка на картинку»
+    # The Link-to-the-image field locator
     link_to_picture_field = (By.NAME, 'link')
-    # локатор кнопки «Сохранить»
-    save_button = (By.XPATH, ".//form[@name='new-card']/button[text()='Сохранить']")
+    # The Save button locator
+    save_button = (By.XPATH, ".//form[@name='new-card']/button[text()='Save']")
 
     def __init__(self, driver):
         self.driver = driver
 
-    # метод кликает на кнопку добавления нового места
+    # The method clicks on the Add button
     def click_add_new_place_button(self):
         self.driver.find_element(*self.add_new_place_button).click()
 
-    # метод вводит название нового места
+    # The method enters the name of the new place
     def set_name(self):
         new_title = "Новое место"
         self.driver.find_element(*self.name_field).send_keys(new_title)
 
-    # метод вводит ссылку на изображение
+    # The method enters a link to the image
     def set_link_to_picture_field(self):
-        self.driver.find_element(*self.link_to_picture_field).send_keys("Ссылка на новое изображение")
+        self.driver.find_element(*self.link_to_picture_field).send_keys("Link to the image")
 
-    # метод кликает на кнопку «Сохранить»
+    # The method clicks on the Save button
     def click_save_button(self):
         self.driver.find_element(*self.save_button).click()
 
-    # напиши шаг добавления нового места
+    # The step to add a new place
