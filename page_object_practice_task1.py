@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-# Класс страницы авторизации
+# Class for the login page
 class LoginPageAround:
     email_field = (By.ID, 'email')
     password_field = (By.ID, 'password')
@@ -28,19 +28,19 @@ class LoginPageAround:
         self.click_sign_in_button()
 
 
-# Класс главной страницы
+# Class for the main page
 class HomePageAround:
-    # создай локатор для поля «Занятие» в профиле пользователя
+    # Create a locator for the Occupation field in the user profile
     profile_description = ...
 
     def __init__(self, driver):
         self.driver = driver
 
-    # метод ожидания загрузки страницы - ожидаем загрузку по появлению поля Занятие
+    # Wait for the Occupation field to appear
     def wait_for_load_home_page(self):
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(self.profile_description))
 
-    # метод для получения текстового значения поля «Занятие»
+    # Retrieve the value of the Occupation field
     def get_description(self):
         return ...
 
@@ -51,29 +51,29 @@ class TestAround:
 
     @classmethod
     def setup_class(cls):
-        # создали драйвер для браузера Chrome
+        # Create a driver for Chrome
         cls.driver = webdriver.Chrome()
 
     def test_get_description(self):
-        # перешли на страницу тестового приложения
+        # Open the test application page
         self.driver.get('https://around-v1.en.practicum-services.com/')
 
-        # создай объект класса страницы авторизации
+        # Create a page object class for the login page
         ...
-        # выполни авторизацию
+        # log in
         ...
 
-        # создай объект класса главной страницы приложения
+        # Create a page object for the main page
         ...
-        # дождись загрузки главной страницы
+        # Wait for the main page to load
         ...
-        # сохрани в переменную description текстовое значение поля «Занятие»
+        # Save the value of Occupation to description
         description = ...
 
-        # проверь, через assert что полученное текстовое значение поля «Занятие» совпадает с ожидаемым
+        # Use assert to check that the actual value of Occupation matches the expected value
         assert ...
 
     @classmethod
     def teardown_class(cls):
-        # Закрой браузер
+        # Close the browser
         ...
