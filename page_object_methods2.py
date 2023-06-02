@@ -2,29 +2,29 @@ from selenium.webdriver.common.by import By
 
 
 class RegistrationPageAround:
-    # локатор поля «Email»
+    # The Email field locator
     email_field = ...
-    # локатор поля «Пароль»
+    # The Password field locator
     password_field = ...
-    # локатор кнопки "Зарегистрироваться"
+    # The Sign-up button locator
     registration_button = ...
 
-    # конструктор класса
+    # The class constructor
     def __init__(self, driver):
         ...
 
-    # метод заполняет поле «Email»
+    # The method fills in the Email field
     def set_email(self, email):
         ...
 
-    # метод заполняет поля «Пароль»
+    # The method fills in the Password field
     def set_password(self, password):
         ...
 
-    # метод кликает по кнопке «Зарегистрироваться»
+    # The method clicks on the Sign-up button
     def click_registration_button(self):
         ...
 
-    # метод регистрации в приложении: объединяет ввод email-а, пароля и клик по кнопке «Зарегистрироваться»
+    # The sign-up method — it combines the email, the password, and the click
     def register(self, ...):
         ...
