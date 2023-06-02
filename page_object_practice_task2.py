@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-# Класс страницы авторизации
+# Class for the login page
 class LoginPageAround:
     email_field = (By.ID, 'email')
     password_field = (By.ID, 'password')
@@ -28,56 +28,56 @@ class LoginPageAround:
         self.click_sign_in_button()
 
 
-# Класс заголовка
+# Class for the header
 class HeaderPageAround:
-    # создай локатор для элемента c email в заголовке страницы
+    # Create a locator for the Email element in the header
     header_user = ...
 
     def __init__(self, driver):
         self.driver = driver
 
-    # метод ожидания загрузки страницы
+    # Wait for the page to load
     def wait_for_load_header(self):
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(self.header_user))
 
-    # метод для получения текста элемента в заголовке
+    # Method to retrieve the text of the element in the header
     def email_in_header(self):
         ...
 
 
-# класс с автотестом
+# Class with the autotest
 class TestAround:
 
     driver = None
 
     @classmethod
     def setup_class(cls):
-        # создали драйвер для браузера Chrome
+        # Create a driver for Chrome
         cls.driver = webdriver.Chrome()
 
     def test_check_email_in_header(self):
-        # перешли на страницу тестового приложения
+        # Open the test application page
         self.driver.get('https://around-v1.en.practicum-services.com/')
 
-        # создай объект класса страницы авторизации
+        # Create a page object class for the login page
         ...
-        # выполни авторизацию
-        email = "Введи сюда email твоей учётной записи"
-        password = "Введи сюда пароль твоей учётной записи"
-        # передавай эти переменные внутрь метода
+        # log in
+        email = "Enter your email"
+        password = "Enter your password"
+        # Pass these variables to the method
         ...
 
-        # создай объект класса заголовка приложения
+        # Create an object for the header
         ...
-        # дождись загрузки заголовка
+        # Wait for the header to load
         ...
-        # получи текст элемента в заголовке
+        # Retrieve the text of an element in the header
         email_from_header = ...
 
-        # сделай проверку, что полученное значение совпадает c email
+        # Check that the retrieved value matches email
         assert ...
 
     @classmethod
     def teardown_class(cls):
-        # Закрой браузер
+        # Close the browser
         ...
