@@ -2,32 +2,32 @@ from selenium.webdriver.common.by import By
 
 
 class LoginPageAround:
-    # The Email field locator
+    # El localizador del campo Correo electrónico
     email_field = (By.ID, 'email')
-    # The Password field locator
+    # El localizador del campo Contraseña
     password_field = (By.ID, 'password')
-    # The Login button locator
+    # El localizador del botón Iniciar sesión
     sign_in_button = (By.CLASS_NAME, 'auth-form__button')
-    # Add a locator for the Sign-up button here
+    # Agrega aquí un localizador para el botón Registrarse
     ...
 
-    # The class constructor
+    # El constructor de clase
     def __init__(self, driver):
         self.driver = driver
 
-    # The method checks if the Login button is clickable
+    # El método comprueba si se puede hacer clic en el botón Iniciar sesión
     def check_sign_in_is_enabled(self):
         return self.driver.find_element(*self.sign_in_button).is_enabled()
 
-    # The method clicks on the Login button
+    # El método hace clic en el botón Iniciar sesión
     def click_sign_in_button(self):
         self.driver.find_element(*self.sign_in_button).click()
 
-    # The method clicks on the Sign-up button
+    # El método hace clic en el botón Registrarse
     def click_registration_button(self):
         ...
 
-    # The method validates the text on the Sign-up button
+    # El método valida el texto en el botón Registrarse
     def check_text_registration_button(self):
         registration_button_text = ...
         assert ...
