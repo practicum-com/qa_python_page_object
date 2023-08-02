@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-# Class for the login page
+# Clase para la página de inicio de sesión
 class LoginPageAround:
     email_field = (By.ID, 'email')
     password_field = (By.ID, 'password')
@@ -28,19 +28,19 @@ class LoginPageAround:
         self.click_sign_in_button()
 
 
-# Class for the main page
+# Clase para la página principal
 class HomePageAround:
-    # Create a locator for the Occupation field in the user profile
+    # Crea un localizador para el campo Ocupación en el perfil de usuario
     profile_description = ...
 
     def __init__(self, driver):
         self.driver = driver
 
-    # Wait for the Occupation field to appear
+    # Espera a que aparezca el campo Ocupación
     def wait_for_load_home_page(self):
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(self.profile_description))
 
-    # Retrieve the value of the Occupation field
+    # Recupera el valor del campo Ocupación
     def get_description(self):
         return ...
 
@@ -51,29 +51,29 @@ class TestAround:
 
     @classmethod
     def setup_class(cls):
-        # Create a driver for Chrome
+        # Crea un controlador para Chrome
         cls.driver = webdriver.Chrome()
 
     def test_get_description(self):
-        # Open the test application page
-        self.driver.get('https://around-v1.en.practicum-services.com/')
+        # Abre la página de la aplicación de prueba
+        self.driver.get('https://around-v1.es.practicum-services.com/')
 
-        # Create a page object class for the login page
+        # Crea una clase de objeto de página para la página de inicio de sesión
         ...
-        # log in
+        # iniciar sesión
         ...
 
-        # Create a page object for the main page
+        # Crea un objeto de página para la página principal
         ...
-        # Wait for the main page to load
+        # Espera a que se cargue la página principal
         ...
-        # Save the value of Occupation to description
+        # Guarda el valor de Ocupación en la descripción
         description = ...
 
-        # Use assert to check that the actual value of Occupation matches the expected value
+        # Utiliza assert para comprobar que el valor actual de Ocupación coincida con el valor esperado
         assert ...
 
     @classmethod
     def teardown_class(cls):
-        # Close the browser
+        # Cerrar el navegador
         ...
