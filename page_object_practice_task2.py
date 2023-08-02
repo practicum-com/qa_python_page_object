@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-# Class for the login page
+# Clase para la página de inicio de sesión
 class LoginPageAround:
     email_field = (By.ID, 'email')
     password_field = (By.ID, 'password')
@@ -28,56 +28,56 @@ class LoginPageAround:
         self.click_sign_in_button()
 
 
-# Class for the header
+# Clase para el encabezado
 class HeaderPageAround:
-    # Create a locator for the Email element in the header
+    # Crea un localizador para el elemento Correo electrónico en el encabezado
     header_user = ...
 
     def __init__(self, driver):
         self.driver = driver
 
-    # Wait for the page to load
+    # Espera a que se cargue la página
     def wait_for_load_header(self):
         WebDriverWait(self.driver, 3).until(expected_conditions.visibility_of_element_located(self.header_user))
 
-    # Method to retrieve the text of the element in the header
+    # Método para recuperar el texto del elemento en el encabezado
     def email_in_header(self):
         ...
 
 
-# Class with the autotest
+# Clase con la prueba automatizada
 class TestAround:
 
     driver = None
 
     @classmethod
     def setup_class(cls):
-        # Create a driver for Chrome
+        # Crea un controlador para Chrome
         cls.driver = webdriver.Chrome()
 
     def test_check_email_in_header(self):
-        # Open the test application page
-        self.driver.get('https://around-v1.en.practicum-services.com/')
+        # Abre la página de la aplicación de prueba
+        self.driver.get('https://around-v1.es.practicum-services.com/')
 
-        # Create a page object class for the login page
+        # Crea una clase de objeto de página para la página de inicio de sesión
         ...
-        # log in
-        email = "Enter your email"
-        password = "Enter your password"
-        # Pass these variables to the method
+        # iniciar sesión
+        correo electrónico = "Introduce tu correo electrónico"
+        contraseña = "Introduce tu contraseña"
+        # Pasa estas variables al método.
         ...
 
-        # Create an object for the header
+        # Crea un objeto para el encabezado
         ...
-        # Wait for the header to load
+        # Espera a que se cargue el encabezado
         ...
-        # Retrieve the text of an element in the header
+        # Recupera el texto de un elemento en el encabezado
         email_from_header = ...
 
-        # Check that the retrieved value matches email
+        # Comprueba que el valor recuperado coincida con el correo electrónico
         assert ...
 
     @classmethod
     def teardown_class(cls):
-        # Close the browser
+        # Cerrar el navegador
         ...
