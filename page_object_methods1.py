@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class HomePageAround:
-    # The Add button locator
+    # The Add button locator1
     add_new_place_button = (By.CLASS_NAME, 'profile__add-button')
     # The Name field locator
     name_field = (By.NAME, 'name')
