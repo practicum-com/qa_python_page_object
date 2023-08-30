@@ -56,7 +56,7 @@ class TestAround:
 
     def test_get_description(self):
         # Abre la página de la aplicación de prueba
-        self.driver.get('https://around-v1.es.practicum-services.com/')
+        self.driver.get('https://around-v1.nm.tripleten-services.com/signin?lng=es')
 
         # Crea una clase de objeto de página para la página de inicio de sesión
         ...
