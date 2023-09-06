@@ -56,7 +56,7 @@ class TestAround:
 
     def test_get_description(self):
         # Open the test application page
-        self.driver.get('https://around-v1.en.practicum-services.com/')
+        self.driver.get('https://around-v1.nm.tripleten-services.com/signin?lng=en')
 
         # Create a page object class for the login page
         ...
